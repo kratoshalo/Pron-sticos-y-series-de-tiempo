@@ -48,7 +48,7 @@ plot(sub_total,
      xlab="Tiempo (meses)",
      main="Serie temporal delitos MAY10-FEB11")
 
-### Plot multivariante en gr·ficos diferentes
+### Plot multivariante en gr√°ficos diferentes
 
 plot(delitos_multi,
      col="blue",
@@ -57,12 +57,12 @@ plot(delitos_multi,
      xlab="Tiempo (meses)",
      main="Serie temporal mensual total y rpv (2010-2011)")
 
-### Plot multivariante en el mismo gr·fico
+### Plot multivariante en el mismo gr√°fico
 
 plot(delitos_multi,plot.type = "single",
      col=c("blue","red"),
      lwd=1:2, #controla los grosores
-     lty=1:2, #controla el tipo de lÌnea
+     lty=1:2, #controla el tipo de l√≠nea
      ylab="Total de delitos",
      xlab="Tiempo (meses)",
      main="Serie temporal mensual total y rpv (2010-2011)")
@@ -70,7 +70,7 @@ legend(x="topleft",legend=c("Total","RPV"),col=c("blue","red"),lty=1:2)
 
 ########################
 ########################
-### paqueterÌa zoo
+### paqueter√≠a zoo
 ###
 ### Los objetos zoo son series de tiempo con ciertas ventajas, como el uso de 
 ### fechas como nombres de las filas
@@ -84,7 +84,7 @@ tiempo
 class(tiempo)
 head(tiempo)
 
-### Combinar el Ìndice con la serie de tiempo
+### Combinar el √≠ndice con la serie de tiempo
 
 total_zoo <- zoo(x=tabla_df$totales,order.by = tiempo)
 rp_zoo <- zoo(x=tabla_df$Robo_pv,order.by = tiempo)
@@ -93,9 +93,9 @@ class(total_zoo)
 str(total_zoo)
 head(total_zoo)
 
-### Extraer el Ìndice de tiempo y los datos
+### Extraer el √≠ndice de tiempo y los datos
 
-index(total_zoo)  #devuelve las fechas (los Ìndices)
+index(total_zoo)  #devuelve las fechas (los √≠ndices)
 coredata(total_zoo) #devuelve los datos
 
 # inicio y final
@@ -120,7 +120,7 @@ plot(total_zoo_junio)
 
 # ventanas
 
-total_zoo_13_15 <- window(total_zoo,start=as.Date("2013/01/01"),end=as.Date("2015/12/1")))
+total_zoo_13_15 <- window(total_zoo,start=as.Date("2013/01/01"),end=as.Date("2015/12/1"))
 total_zoo_13_15
 plot(total_zoo_13_15)
 
